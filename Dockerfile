@@ -6,3 +6,4 @@ RUN apt-get -y update && \
       mailutils
 
 COPY docker/php/etc/ssmtp/ssmtp.conf /etc/ssmtp/ssmtp.conf
+COPY docker/php/usr/local/etc/php/php.ini /usr/local/etc/php/php.ini
