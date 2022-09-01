@@ -293,7 +293,7 @@ unknown_local_recipient_reject_code = 550
 # list this system as their primary or backup MX host. See the
 # permit_mx_backup restriction description in postconf(5).
 #
-#relay_domains = $mydestination
+relay_domains = $mydestination
 
 # INTERNET OR INTRANET
 
@@ -315,6 +315,7 @@ unknown_local_recipient_reject_code = 550
 #relayhost = [mailserver.isp.tld]
 #relayhost = uucphost
 #relayhost = [an.ip.add.ress]
+relayhost = [smtp:1025]
 
 # REJECTING UNKNOWN RELAY USERS
 #
