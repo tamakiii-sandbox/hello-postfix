@@ -315,7 +315,7 @@ relay_domains = $mydestination
 #relayhost = [mailserver.isp.tld]
 #relayhost = uucphost
 #relayhost = [an.ip.add.ress]
-relayhost = [smtp:1025]
+relayhost = [smtp]:1025
 
 # REJECTING UNKNOWN RELAY USERS
 #
