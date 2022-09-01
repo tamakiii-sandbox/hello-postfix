@@ -7,7 +7,7 @@ services:
     #   - 1025:1025
 
   php:
-    build: .
+    build: docker/php
     working_dir: /app
     volumes:
       - .:/app
