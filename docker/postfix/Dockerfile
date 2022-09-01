@@ -21,5 +21,6 @@ RUN yum update -y && \
 
 COPY etc/postfix/main.cf /etc/postfix/main.cf
 COPY etc/sysconfig/network /etc/sysconfig/network
+COPY etc/aliases /etc/aliases
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
