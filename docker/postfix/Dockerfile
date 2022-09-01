@@ -1,0 +1,25 @@
+FROM --platform=linux/amd64 amazonlinux:2017.09
+
+RUN yum update -y && \
+    yum install -y \
+      postfix \
+      mailx \
+      which \
+      less \
+      make \
+      && \
+    yum clean all && \
+    rm -rf /var/cache/yum/*
+
+RUN yum update -y && \
+    yum install -y \
+      vim \
+      man \
+      && \
+    yum clean all && \
+    rm -rf /var/cache/yum/*
+
+COPY etc/postfix/main.cf /etc/postfix/main.cf
+COPY etc/sysconfig/network /etc/sysconfig/network
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
