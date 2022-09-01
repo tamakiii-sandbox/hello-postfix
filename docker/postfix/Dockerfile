@@ -15,6 +15,8 @@ RUN yum update -y && \
     yum install -y \
       vim \
       man \
+      bind-utils \
+      file \
       && \
     yum clean all && \
     rm -rf /var/cache/yum/*
